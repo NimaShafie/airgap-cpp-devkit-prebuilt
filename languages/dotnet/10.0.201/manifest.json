@@ -1,0 +1,104 @@
+{
+  "_comment": ".NET SDK prebuilt manifest. SHA512 hashes verified against official Microsoft release checksums.",
+
+  "sdk_version": "10.0.201",
+  "runtime_version": "10.0.5",
+  "release_date": "2026-03-30",
+  "upstream": "https://dotnet.microsoft.com/en-us/download/dotnet/10.0",
+
+  "archives": {
+    "windows-x64": {
+      "zip": {
+        "filename": "dotnet-sdk-10.0.201-win-x64.zip",
+        "sha256": "56c346275e765767f335ce3df4468e5d471836e967a6cca0234ddf60ad9a6c80",
+        "size_bytes": 304490729,
+        "split_parts": [
+          {
+            "filename": "dotnet-sdk-10.0.201-win-x64.zip.part-aa",
+            "sha256": "b1d6b42d5b7f8cd11317115f2605c6cd05303f88135699170cbef51540be24e7"
+          },
+          {
+            "filename": "dotnet-sdk-10.0.201-win-x64.zip.part-ab",
+            "sha256": "f488a37204cfc6fbdf62ae1264653876ab622f48fec26a7697ea4f9b2378dd1b"
+          },
+          {
+            "filename": "dotnet-sdk-10.0.201-win-x64.zip.part-ac",
+            "sha256": "a13593d7855397a2f9070e67adce461fb802b2fcd39eac033a80df3805e8c87c"
+          },
+          {
+            "filename": "dotnet-sdk-10.0.201-win-x64.zip.part-ad",
+            "sha256": "795b612d2f3e18517d7a8f934eaa6de77abd0f3e5f54a1cec9d3f9e404235daf"
+          },
+          {
+            "filename": "dotnet-sdk-10.0.201-win-x64.zip.part-ae",
+            "sha256": "a97fed8c2f7438fb3a5d13b6ccd82e6d0949d76b6cbbf1d290c92f63d8c527fe"
+          },
+          {
+            "filename": "dotnet-sdk-10.0.201-win-x64.zip.part-af",
+            "sha256": "36b73f9018992fc2efb98aee5c025e34005e680bf450ae6e7bfae38785666ecf"
+          },
+          {
+            "filename": "dotnet-sdk-10.0.201-win-x64.zip.part-ag",
+            "sha256": "4e6fe218a91e7c06d919f42823da8c1d78df5e37425035b7eb007e13b2987d49"
+          }
+        ]
+      },
+      "7z": {
+        "filename": "dotnet-sdk-10.0.201-win-x64.7z",
+        "sha256": "0b354294c07734f4067bdb94f9613a989b82a09f24717916e3e53bfe047a04c5",
+        "size_bytes": 154977349,
+        "split_parts": [
+          {
+            "filename": "dotnet-sdk-10.0.201-win-x64.7z.part-aa",
+            "sha256": "cb63760b18f7203392798f73fc115b1baed8965c2e58ceb18cb5ee2d72dea47a"
+          },
+          {
+            "filename": "dotnet-sdk-10.0.201-win-x64.7z.part-ab",
+            "sha256": "698af9b1ba20a888377fd387d446d3eb9dd9c340f5420c67b48fb0a3914059c2"
+          },
+          {
+            "filename": "dotnet-sdk-10.0.201-win-x64.7z.part-ac",
+            "sha256": "bb79bc44f8180b05750ce429061d152341ff07fa91cd0b78ddefd88e07c5de09"
+          },
+          {
+            "filename": "dotnet-sdk-10.0.201-win-x64.7z.part-ad",
+            "sha256": "398f1481c88bddd5002af181ce159566f4ba7aac20914eec17fd08a65ee0d411"
+          }
+        ]
+      }
+    },
+    "linux-x64": {
+      "tar.gz": {
+        "filename": "dotnet-sdk-10.0.201-linux-x64.tar.gz",
+        "sha256": "ac6b0ea9aae5d96ee5c41fed1d11c1d5c6bf8d994c75389da8055bea23e44eef",
+        "size_bytes": 242025193,
+        "split_parts": [
+          {
+            "filename": "dotnet-sdk-10.0.201-linux-x64.tar.gz.part-aa",
+            "sha256": "3a8f5797677348ff4dd3f6b0b4723f2573fc993438427dee4cdda1c2a1db4d64"
+          },
+          {
+            "filename": "dotnet-sdk-10.0.201-linux-x64.tar.gz.part-ab",
+            "sha256": "48fa038ea90a7999421f53bcf42ba53f7c78a61a69d4ef0a316ecb69c249621c"
+          },
+          {
+            "filename": "dotnet-sdk-10.0.201-linux-x64.tar.gz.part-ac",
+            "sha256": "fca8710342d0c89955abfb85d22006f2077352aece9ad6635f9e0ee27de8c647"
+          },
+          {
+            "filename": "dotnet-sdk-10.0.201-linux-x64.tar.gz.part-ad",
+            "sha256": "836445440042084c0075bf0e8d15d6eede15fbfb5950f2893febb9c1fd049b14"
+          },
+          {
+            "filename": "dotnet-sdk-10.0.201-linux-x64.tar.gz.part-ae",
+            "sha256": "1fb60b99f6b31efede11c9118b51ac1544f5e4a904d030fa81827192c01f9b76"
+          },
+          {
+            "filename": "dotnet-sdk-10.0.201-linux-x64.tar.gz.part-af",
+            "sha256": "713a493a2c1665d3da09f13ab0f47fd9bc46a8ec3de4c9c9ef67fa601952f826"
+          }
+        ]
+      }
+    }
+  }
+}
