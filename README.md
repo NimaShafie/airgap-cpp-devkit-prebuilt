@@ -4,7 +4,7 @@
 
 Pre-built binaries for the `airgap-cpp-devkit` suite.
 All binaries are precompiled, integrity-verified, and ready for air-gapped
-installation — no compiler, no internet access, no package manager required.
+installation -- no compiler, no internet access, no package manager required.
 
 Main repo: https://github.com/NimaShafie/airgap-cpp-devkit
 
@@ -17,7 +17,7 @@ systems to skip source compilation entirely. Each module in the main repo has
 a corresponding entry here.
 
 In binary-restricted environments (where prebuilt binaries are not permitted
-by policy), this submodule can be skipped entirely — every tool in the main
+by policy), this submodule can be skipped entirely -- every tool in the main
 repo can also be built from vendored source.
 
 ---
@@ -25,16 +25,16 @@ repo can also be built from vendored source.
 ## Contents
 
 ### `build-tools/cmake/`
-CMake 4.3.0 prebuilt binaries.
+CMake 4.3.1 prebuilt binaries. Both files are under 49MB -- no split required.
 
-| Platform | Format | Parts |
-|----------|--------|-------|
-| Windows x86_64 | `.zip` | 2 parts |
-| Windows x86_64 | `.7z` | 1 part |
-| Linux x86_64 | `.tar.gz` | 2 parts |
+| File | Platform |
+|------|---------|
+| `cmake-4.3.1-windows-x86_64.zip` | Windows x86_64 |
+| `cmake-4.3.1-linux-x86_64.tar.gz` | Linux x86_64 |
+| `cmake-4.3.1.tar.gz` | Source tarball |
 
 ### `dev-tools/7zip/`
-7-Zip 26.00 prebuilt binaries for Windows and Linux.
+7-Zip 26.00 prebuilt binaries for Windows and Linux. All files under 49MB.
 
 | File | Purpose |
 |------|---------|
@@ -43,38 +43,60 @@ CMake 4.3.0 prebuilt binaries.
 | `7z2600-linux-x64.tar.xz` | Linux 7zz binary |
 
 ### `dev-tools/servy/`
-Servy 7.3 Windows service manager.
+Servy 7.8 Windows service manager. Single file under 100MB -- no split required.
 
-| File | Format | Parts |
-|------|--------|-------|
-| `servy-7.3-x64-portable.7z` | `.7z` | 2 parts |
+| File | Format |
+|------|--------|
+| `servy-7.8-x64-portable.7z` | `.7z` portable |
+
+### `dev-tools/conan/`
+Conan 2.27.0 self-contained executables. Both files under 49MB -- no split required.
+
+| File | Platform |
+|------|---------|
+| `conan-2.27.0-windows-x86_64.zip` | Windows x86_64 |
+| `conan-2.27.0-linux-x86_64.tgz` | Linux x86_64 |
 
 ### `frameworks/grpc/windows/1.78.1/`
 gRPC v1.78.1 prebuilt for Windows x64 (MSVC 19.50, Release).
 Full `cmake --target install` output: `bin/`, `include/`, `lib/`, `share/`.
 
-| Format | Size | Parts |
-|--------|------|-------|
-| `.7z` (ultra) | 69MB | 2 parts |
-| `.zip` (ultra) | 162MB | 4 parts |
+| Format | Size | Parts | Split at |
+|--------|------|-------|----------|
+| `.zip` (deflate-9) | 170MB | 4 | 49MB |
 
 Install via `frameworks/grpc/install-prebuilt.ps1`.
 
-### `toolchains/clang/mingw/`
-llvm-mingw 20260324 — LLVM-based MinGW-w64 toolchain.
+### `languages/dotnet/10.0.201/`
+.NET SDK 10.0.201 for Windows and Linux.
 
-| Platform | Format | Parts |
-|----------|--------|-------|
-| Windows x86_64 (UCRT) | `.zip` | 4 parts |
-| Windows x86_64 (UCRT) | `.7z` | 2 parts |
-| Ubuntu 22.04 x86_64 | `.tar.xz` | 2 parts |
+| File | Size | Parts | Split at |
+|------|------|-------|----------|
+| `dotnet-sdk-10.0.201-win-x64.zip` (deflate-9) | 283MB | 6 | 49MB |
+| `dotnet-sdk-10.0.201-linux-x64.tar.gz` | 231MB | 6 | 45MB |
+
+### `languages/python/`
+Python 3.14.4 portable interpreters.
+
+| File | Platform | Parts |
+|------|---------|-------|
+| `python-3.14.4-embed-amd64.zip` | Windows (embeddable) | 1 |
+| `cpython-3.14.4+20260408-x86_64-unknown-linux-gnu-install_only.tar.gz` | Linux | 2 |
+
+### `toolchains/clang/mingw/`
+llvm-mingw 20260324 -- LLVM-based MinGW-w64 toolchain.
+
+| File | Platform | Parts | Split at |
+|------|---------|-------|----------|
+| `llvm-mingw-20260324-ucrt-x86_64.zip` (deflate-9) | Windows x86_64 (UCRT) | 4 | 49MB |
+| `llvm-mingw-20260324-ucrt-ubuntu-22.04-x86_64.tar.xz` | Ubuntu 22.04 x86_64 | 2 | 50MB |
 
 ### `toolchains/clang/rhel8/`
 Clang 20.1.8 RPM packages for RHEL 8.
 
-| File | Parts |
-|------|-------|
-| `clang-20.1.8-rhel8-rpms.tar` | 2 parts |
+| File | Parts | Split at |
+|------|-------|----------|
+| `clang-20.1.8-rhel8-rpms.tar` | 2 | 50MB |
 
 ### `toolchains/clang/source-build/`
 Prebuilt clang-format, clang-tidy, and Ninja binaries.
@@ -84,37 +106,62 @@ Prebuilt clang-format, clang-tidy, and Ninja binaries.
 | `clang-format.exe` | Windows |
 | `clang-format-linux` | Linux |
 | `clang-tidy.exe` | Windows |
-| `clang-tidy.part-aa/ab` | Linux (split, 2 parts) |
-| `clang-llvm-22.1.2-linux-x64-slim.tar.xz` | Linux (3 parts) |
+| `clang-tidy.part-aa/ab` | Linux (2 parts, split at 50MB) |
+| `clang-llvm-22.1.2-linux-x64-slim.tar.xz` | Linux (3 parts, split at 50MB) |
 | `ninja.exe` | Windows |
 | `ninja-linux` | Linux |
 
 ### `toolchains/gcc/linux/`
 GCC Toolset 15 RPM packages for RHEL 8.
 
-| File | Parts |
-|------|-------|
-| `gcc-toolset-15-rhel8-rpms.tar` | 2 parts |
+| File | Parts | Split at |
+|------|-------|----------|
+| `gcc-toolset-15-rhel8-rpms.tar` | 2 | 50MB |
 
 ### `toolchains/gcc/windows/`
 WinLibs GCC 15.2.0 + MinGW-w64 13.0.0 UCRT toolchain for Windows.
 
-| Format | Parts |
-|--------|-------|
-| `.zip` | 6 parts |
-| `.7z` | 3 parts |
+| File | Size | Parts | Split at |
+|------|------|-------|----------|
+| `winlibs-x86_64-posix-seh-gcc-15.2.0-mingw-w64ucrt-13.0.0-r6.zip` (deflate-9) | 264MB | 6 | 49MB |
 
 ---
 
 ## Archive Formats
 
-All large archives are available in both `.zip` and `.7z` formats where
-applicable. `.7z` uses ultra compression (LZMA2) and is significantly smaller.
-`.zip` is provided as a fallback for systems without 7-Zip.
+Windows binaries use `.zip` (deflate level 9) -- extractable with PowerShell
+`Expand-Archive`, `unzip`, or any standard zip tool. No 7-Zip required.
 
-Install scripts auto-detect 7-Zip and prefer `.7z` automatically.
-If 7-Zip is not found in standard locations or on PATH, the vendored
-`dev-tools/7zip/7z2600-x64.exe` is used as a fallback.
+Linux binaries use `.tar.gz` or `.tar.xz` -- extractable with standard `tar`.
+
+The only `.7z` files present are the 7-Zip extras package and Servy, both of
+which are either self-bootstrapping or require 7-Zip as a prerequisite by design.
+
+---
+
+## Split Parts
+
+Large archives are split into parts named `<archive>.part-aa`, `part-ab`, etc.
+Reassemble before extraction:
+
+```bash
+# Linux
+cat archive.zip.part-* > archive.zip
+
+# Windows (Git Bash)
+cat archive.zip.part-* > archive.zip
+
+# Windows (PowerShell)
+$parts = Get-ChildItem -Filter "archive.zip.part-*" | Sort-Object Name
+$out = [System.IO.File]::OpenWrite("archive.zip")
+foreach ($p in $parts) {
+    $bytes = [System.IO.File]::ReadAllBytes($p.FullName)
+    $out.Write($bytes, 0, $bytes.Length)
+}
+$out.Close()
+```
+
+Install scripts handle reassembly automatically -- no manual steps required.
 
 ---
 
@@ -137,13 +184,6 @@ git submodule update --init prebuilt-binaries
 ```
 
 Each tool's install script references this submodule automatically.
-To install a specific tool from prebuilt:
-
-```bash
-# Example: gRPC prebuilt
-cd frameworks/grpc
-./install-prebuilt.ps1 -version 1.78.1
-```
 
 ---
 
