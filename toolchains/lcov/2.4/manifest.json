@@ -1,0 +1,16 @@
+{
+  "tool": "lcov",
+  "version": "2.4",
+  "source": "https://github.com/linux-test-project/lcov/releases/tag/v2.4",
+  "description": "Code coverage frontend for gcov. Linux only (requires Perl).",
+  "platforms": {
+    "linux-x64": {
+      "rpm": "lcov-2.4-0.noarch.rpm",
+      "source_archive": "lcov-2.4.tar.xz",
+      "install_rpm": "rpm -ivh lcov-2.4-0.noarch.rpm",
+      "install_source": "tar -xJf lcov-2.4.tar.xz && cd lcov-2.4 && make install PREFIX=/usr/local"
+    }
+  },
+  "compression": "tar.xz",
+  "notes": "gcov ships with GCC toolset. Install gcc-toolset from prebuilt/toolchains/gcc to get gcov."
+}

@@ -1,0 +1,20 @@
+{
+  "tool": "llvm",
+  "version": "22.1.3",
+  "source": "https://github.com/llvm/llvm-project/releases/tag/llvmorg-22.1.3",
+  "includes": ["clang", "clang++", "clang-format", "clang-tidy", "lld", "llvm-ar", "llvm-nm", "llvm-objdump", "llvm-ranlib"],
+  "platforms": {
+    "windows": {
+      "archive": "clang+llvm-22.1.3-x86_64-pc-windows-msvc.tar.xz",
+      "parts": 17,
+      "reassemble": "cat clang+llvm-22.1.3-x86_64-pc-windows-msvc.tar.xz.part-* | tar -xJ"
+    },
+    "linux-x64": {
+      "archive": "LLVM-22.1.3-Linux-X64.tar.xz",
+      "parts": 38,
+      "reassemble": "cat LLVM-22.1.3-Linux-X64.tar.xz.part-* | tar -xJ"
+    }
+  },
+  "compression": "tar.xz",
+  "part_size_mb": 50
+}

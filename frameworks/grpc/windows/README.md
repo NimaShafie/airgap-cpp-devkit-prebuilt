@@ -9,7 +9,8 @@ Part of the `airgap-devkit` prebuilt-binaries submodule.
 
 | Version | Compiler | Arch | Status |
 |---------|----------|------|--------|
-| 1.78.1  | MSVC 19.50 (VS 2026 Insiders) | x64 | candidate-testing |
+| 1.80.0  | MSVC 19.50 (VS 2026 Insiders) | x64 | current |
+| 1.78.1  | MSVC 19.50 (VS 2026 Insiders) | x64 | previous |
 
 ---
 
@@ -32,7 +33,7 @@ Run from **any PowerShell** (no Visual Studio required):
 
 ```powershell
 cd C:\path\to\airgap-devkit\frameworks\grpc
-.\install-prebuilt.ps1 -version 1.78.1 -dest C:\MyInstall\grpc-1.78.1
+.\install-prebuilt.ps1 -version 1.80.0 -dest C:\MyInstall\grpc-1.80.0
 ```
 
 The script will:
@@ -49,7 +50,7 @@ The script will:
 
 | Flag | Default | Description |
 |------|---------|-------------|
-| `-version` | `1.78.1` | gRPC version to install |
+| `-version` | `1.80.0` | gRPC version to install |
 | `-dest` | Auto-detected | Install path (admin → `C:\Program Files\airgap-devkit\grpc-<ver>`, user → `%LOCALAPPDATA%\...`) |
 | `-format` | `7z` if 7-Zip found, else `zip` | Archive format to extract |
 
@@ -61,7 +62,7 @@ If you prefer to build gRPC yourself from the vendored source tarball:
 
 ```powershell
 cd C:\path\to\airgap-devkit\frameworks\grpc
-.\setup.ps1 -version 1.78.1 -dest C:\MyInstall\grpc-1.78.1
+.\setup.ps1 -version 1.80.0 -dest C:\MyInstall\grpc-1.80.0
 ```
 
 See `frameworks/grpc/README.md` for full build requirements.
@@ -73,13 +74,15 @@ See `frameworks/grpc/README.md` for full build requirements.
 ```
 prebuilt-binaries/frameworks/grpc/windows/
 ├── README.md                  <- this file
-└── 1.78.1/
-    ├── manifest.json          <- SHA256 hashes for all parts
-    ├── grpc-1.78.1-windows-x64.7z.part-aa    <- .7z ultra compressed parts
-    ├── grpc-1.78.1-windows-x64.7z.part-ab
-    ├── ...
-    ├── grpc-1.78.1-windows-x64.zip.part-aa   <- .zip ultra compressed parts
-    ├── grpc-1.78.1-windows-x64.zip.part-ab
+├── 1.80.0/
+│   ├── manifest.json          <- SHA256 hashes for all parts
+│   ├── grpc-1.80.0-windows-x64.7z.part-aa    <- .7z ultra compressed parts
+│   ├── grpc-1.80.0-windows-x64.7z.part-ab
+│   ├── ...
+│   ├── grpc-1.80.0-windows-x64.zip.part-aa   <- .zip ultra compressed parts
+│   ├── grpc-1.80.0-windows-x64.zip.part-ab
+│   └── ...
+└── 1.78.1/                    <- previous version
     └── ...
 ```
 

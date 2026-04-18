@@ -1,0 +1,8 @@
+{
+  "tool": "grpc", "version": "1.80.0",
+  "platform": "windows",
+  "platforms": {
+    "windows": { "archive": "grpc-1.80.0-windows-x64.tar.xz", "reassemble": "tar -xJf grpc-1.80.0-windows-x64.tar.xz" }
+  },
+  "compression": "tar.xz"
+}

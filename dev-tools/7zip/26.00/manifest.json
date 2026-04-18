@@ -1,0 +1,9 @@
+{
+  "tool": "7zip", "version": "26.00",
+  "source": "https://www.7-zip.org/download.html",
+  "platforms": {
+    "windows": { "archive": "7z2600-x64.exe", "install": "run installer or extract with 7z" },
+    "linux-x64": { "archive": "7z2600-linux-x64.tar.xz", "reassemble": "tar -xJf 7z2600-linux-x64.tar.xz" }
+  },
+  "compression": "tar.xz"
+}

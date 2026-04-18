@@ -1,0 +1,10 @@
+{
+  "tool": "sqlite", "version": "3.53.0",
+  "source": "https://sqlite.org/download.html",
+  "platforms": {
+    "windows": { "archive": "sqlite-tools-3.53.0-windows-x64.tar.xz", "reassemble": "tar -xJf sqlite-tools-3.53.0-windows-x64.tar.xz" },
+    "linux-x64": { "archive": "sqlite-tools-3.53.0-linux-x64.tar.xz", "reassemble": "tar -xJf sqlite-tools-3.53.0-linux-x64.tar.xz" },
+    "linux-rhel8": { "archive": "sqlite-3.26.0-20.el8_10.x86_64.rpm", "install": "rpm -ivh sqlite-3.26.0-20.el8_10.x86_64.rpm" }
+  },
+  "compression": "tar.xz"
+}

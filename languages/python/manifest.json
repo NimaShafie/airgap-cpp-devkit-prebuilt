@@ -1,0 +1,10 @@
+{
+  "tool": "python", "version": "3.14.4",
+  "source": "https://www.python.org/downloads/release/python-3144/",
+  "platforms": {
+    "windows-embed": { "archive": "python-3.14.4-embed-amd64.zip", "notes": "Embeddable/portable, no installer needed" },
+    "windows-full": { "archive": "python-3.14.4-amd64.zip", "notes": "Full Windows package" },
+    "linux-x64": { "archive": "cpython-3.14.4-linux-x64.tar.xz", "parts": 2, "reassemble": "cat cpython-3.14.4-linux-x64.tar.xz.part-* | tar -xJ" }
+  },
+  "compression": "tar.xz", "part_size_mb": 50
+}

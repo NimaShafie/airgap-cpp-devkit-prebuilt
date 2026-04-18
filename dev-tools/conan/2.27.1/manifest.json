@@ -1,0 +1,9 @@
+{
+  "tool": "conan", "version": "2.27.1",
+  "source": "https://github.com/conan-io/conan/releases/tag/2.27.1",
+  "platforms": {
+    "windows": { "archive": "conan-2.27.1-windows-x86_64.tar.xz", "reassemble": "tar -xJf conan-2.27.1-windows-x86_64.tar.xz" },
+    "linux-x64": { "archive": "conan-2.27.1-amd64.deb", "install": "dpkg -i conan-2.27.1-amd64.deb" }
+  },
+  "compression": "tar.xz"
+}

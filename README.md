@@ -58,22 +58,22 @@ CMake 4.3.1 prebuilt binaries. Both files are under 49MB -- no split required.
 | `7z2600-linux-x64.tar.xz` | Linux 7zz binary |
 
 ### `dev-tools/servy/`
-Servy 7.8 Windows service manager. Single file under 100MB -- no split required.
+Servy 7.9 Windows service manager. Single file under 100MB -- no split required.
 
 | File | Format |
 |------|--------|
-| `servy-7.8-x64-portable.7z` | `.7z` portable |
+| `servy-7.9-x64-portable.7z` | `.7z` portable |
 
 ### `dev-tools/conan/`
-Conan 2.27.0 self-contained executables. Both files under 49MB -- no split required.
+Conan 2.27.1 self-contained executables. Both files under 49MB -- no split required.
 
 | File | Platform |
 |------|---------|
-| `conan-2.27.0-windows-x86_64.zip` | Windows x86_64 |
-| `conan-2.27.0-linux-x86_64.tgz` | Linux x86_64 |
+| `conan-2.27.1-windows-x86_64.zip` | Windows x86_64 |
+| `conan-2.27.1-linux-x86_64.tgz` | Linux x86_64 |
 
-### `frameworks/grpc/windows/1.78.1/`
-gRPC v1.78.1 prebuilt for Windows x64 (MSVC 19.50, Release).
+### `frameworks/grpc/windows/1.80.0/`
+gRPC v1.80.0 prebuilt for Windows x64 (MSVC 19.50, Release).
 Full `cmake --target install` output: `bin/`, `include/`, `lib/`, `share/`.
 
 | Format | Size | Parts | Split at |
@@ -122,7 +122,7 @@ Prebuilt clang-format, clang-tidy, and Ninja binaries.
 | `clang-format-linux` | Linux |
 | `clang-tidy.exe` | Windows |
 | `clang-tidy.part-aa/ab` | Linux (2 parts, split at 50MB) |
-| `clang-llvm-22.1.2-linux-x64-slim.tar.xz` | Linux (3 parts, split at 50MB) |
+| `clang-llvm-22.1.3-linux-x64-slim.tar.xz` | Linux (3 parts, split at 50MB) |
 | `ninja.exe` | Windows |
 | `ninja-linux` | Linux |
 

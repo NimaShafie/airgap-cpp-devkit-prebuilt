@@ -1,0 +1,8 @@
+{
+  "tool": "servy", "version": "7.9",
+  "platform": "windows",
+  "platforms": {
+    "windows": { "archive": "servy-7.9-windows-x64.tar.xz", "reassemble": "tar -xJf servy-7.9-windows-x64.tar.xz" }
+  },
+  "compression": "tar.xz"
+}
