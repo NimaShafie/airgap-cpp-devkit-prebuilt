@@ -1,0 +1,17 @@
+{
+  "tool": "osslsigncode",
+  "version": "2.13",
+  "source": "https://github.com/mtrojnar/osslsigncode/releases/tag/2.13",
+  "platforms": {
+    "windows": {
+      "archive": "osslsigncode-2.13-windows-x64-mingw.zip",
+      "sha256": "c6d3ec8f383a6ed204503a9d4445788f2d3e71da87f3604c42e40167ad9ceb8e"
+    },
+    "linux-x64": {
+      "source_archive": "tools/dev-tools/osslsigncode/sources/osslsigncode-2.13.tar.gz",
+      "sha256": "ee95638b8bec0c019ddf28cb14988645abbd180dcd017536338b7d0d5eaaea96",
+      "build": "cmake -S . -B build -DCMAKE_BUILD_TYPE=Release && cmake --build build && cmake --install build",
+      "notes": "Requires: gcc cmake openssl-devel libcurl-devel zlib-devel pkg-config"
+    }
+  }
+}
