@@ -103,6 +103,38 @@
         "clang%2Bllvm-23.1.0-x86_64-pc-windows-msvc.zip.part-bc": "d1a2b9b935110f56416bcf2351bee4c1058d322b4d489c95c12c46910ce9ab1a"
       },
       "reassemble": "cat clang%2Bllvm-23.1.0-x86_64-pc-windows-msvc.zip.part-* > clang%2Bllvm-23.1.0-x86_64-pc-windows-msvc.zip && unzip -o clang%2Bllvm-23.1.0-x86_64-pc-windows-msvc.zip"
+    },
+    "linux-musl": {
+      "archive": "LLVM-23.1.0-Linux-X64-musl.tar.xz",
+      "part_sha256": {
+        "LLVM-23.1.0-Linux-X64-musl.tar.xz.part-aa": "64a1b16180eae6845945a330d6e880c9a221b8619bb02ad89b8917630cf929b6",
+        "LLVM-23.1.0-Linux-X64-musl.tar.xz.part-ab": "35a1539e81ffdc79ed250a1ad850dd3eb2a791bc4a6f8ca63803017ec5ac6949"
+      },
+      "reassemble": "cat LLVM-23.1.0-Linux-X64-musl.tar.xz.part-* | tar -xJ"
+    },
+    "linux-rhel10": {
+      "archive": "LLVM-23.1.0-Linux-X64-rhel10.tar.xz",
+      "part_sha256": {
+        "LLVM-23.1.0-Linux-X64-rhel10.tar.xz.part-aa": "caf6b12601cb11e1f348a9d0aade0f3a6e08e404fca14c3baa37a4b78e5f6173",
+        "LLVM-23.1.0-Linux-X64-rhel10.tar.xz.part-ab": "f11b566bbabff735a6047a9ad6d2efce3ba8f2a4f12893368424ffb0e08f553b"
+      },
+      "reassemble": "cat LLVM-23.1.0-Linux-X64-rhel10.tar.xz.part-* | tar -xJ"
+    },
+    "linux-rhel8": {
+      "archive": "LLVM-23.1.0-Linux-X64-rhel8.tar.xz",
+      "part_sha256": {
+        "LLVM-23.1.0-Linux-X64-rhel8.tar.xz.part-aa": "1b4f0948289fb10d633786d9d594d2ca5aa4238ead40acdb63fcb205151f8437",
+        "LLVM-23.1.0-Linux-X64-rhel8.tar.xz.part-ab": "833f160384090f3d1247300788bc4a7bf2cd8e4ca83c53c50b8880a2f2ab5266"
+      },
+      "reassemble": "cat LLVM-23.1.0-Linux-X64-rhel8.tar.xz.part-* | tar -xJ"
+    },
+    "linux-rhel9": {
+      "archive": "LLVM-23.1.0-Linux-X64-rhel9.tar.xz",
+      "part_sha256": {
+        "LLVM-23.1.0-Linux-X64-rhel9.tar.xz.part-aa": "58b7fb3021a76a6909a709b945e54361d664d9bea7a44a9326ecfb78997b708c",
+        "LLVM-23.1.0-Linux-X64-rhel9.tar.xz.part-ab": "e307ab808b9f52af778495d449fc9791d43d608c456821d00ea94fab46168477"
+      },
+      "reassemble": "cat LLVM-23.1.0-Linux-X64-rhel9.tar.xz.part-* | tar -xJ"
     }
   },
   "compression": "tar.gz+zip",
